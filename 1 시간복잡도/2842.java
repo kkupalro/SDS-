@@ -19,7 +19,7 @@ public class Main {
 	static int Hlist[] = new int[SIZE * SIZE];
 	static int temp[];
 	static int kcnt, sr, sc, minH, maxH, minK, maxK, hcnt;
-	static int dr[] = {-1,-1,-1, 0, 0, 1, 1, 1}; // ÁÂ»ó, »ó, ¿ì»ó, ÁÂ, ¿ì, ÁÂÇÏ, ÇÏ, ¿ìÇÏ
+	static int dr[] = {-1,-1,-1, 0, 0, 1, 1, 1}; // ì¢Œìƒ, ìƒ, ìš°ìƒ, ì¢Œ, ìš°, ì¢Œí•˜, í•˜, ìš°í•˜
 	static int dc[] = {-1, 0, 1,-1, 1,-1, 0, 1}; // '\ , ^, /',  <, >, ./,  v, \.
 	static int bfs(int l, int h)
 	{
@@ -51,7 +51,7 @@ public class Main {
 					if(map[nr][nc] == 'K') return 0;
 					continue;
 				}
-				V[nr][nc] = 1; // ¹æ¹®
+				V[nr][nc] = 1; // ë°©ë¬¸
 				q.add(nr);
 				q.add(nc);
 				if(map[nr][nc] == 'K') ret++;
