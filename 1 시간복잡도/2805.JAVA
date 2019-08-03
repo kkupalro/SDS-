@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class Main {
 	static int N, M, matrix[];
 	static boolean solve(int mid) {
-		long sum = 0; // int ¹üÀ§ ÃÊ°úÇÒ¼ö ÀÖÀ½.
+		long sum = 0; // int ë²”ìœ„ ì´ˆê³¼í• ìˆ˜ ìˆìŒ.
 		for(int i = 1; i <= N; i++)
 		{
 			if(matrix[i] > mid)
@@ -30,8 +30,8 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = null;
 		st = new StringTokenizer(br.readLine(), " ");
-		N = Integer.parseInt(st.nextToken()); // ³ª¹«ÀÇ ¼ö
-		M = Integer.parseInt(st.nextToken()); // ³ª¹«ÀÇ ±æÀÌ
+		N = Integer.parseInt(st.nextToken()); // ë‚˜ë¬´ì˜ ìˆ˜
+		M = Integer.parseInt(st.nextToken()); // ë‚˜ë¬´ì˜ ê¸¸ì´
 		st = new StringTokenizer(br.readLine(), " ");
 		matrix = new int[N+1];
 		for(int i = 1; i <= N; i++)
