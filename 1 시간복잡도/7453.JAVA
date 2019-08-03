@@ -46,12 +46,12 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = null;
 		st = new StringTokenizer(br.readLine(), " ");
-		int N = Integer.parseInt(st.nextToken()); // ¹è¿­ÀÇ Å©±â
+		int N = Integer.parseInt(st.nextToken()); // ë°°ì—´ì˜ í¬ê¸°
 		int a[] = new int[N];
 		int b[] = new int[N];
 		int c[] = new int[N];
 		int d[] = new int[N];
-		// ÀÔ·Â°ª ÀúÀå
+		// ì…ë ¥ê°’ ì €ì¥
 		for(int i = 0; i < N; i++)
 		{
 			st = new StringTokenizer(br.readLine(), " ");
@@ -60,7 +60,7 @@ public class Main {
 			c[i] = Integer.parseInt(st.nextToken());
 			d[i] = Integer.parseInt(st.nextToken());
 		}
-		// ºÎºĞÇÕ ÀúÀå
+		// ë¶€ë¶„í•© ì €ì¥
 		int ab[] = new int[N*N];
 		int cd[] = new int[N*N];
 		for(int i = 0; i < N; i++)
