@@ -43,23 +43,23 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = null;
-		int T = Integer.parseInt(br.readLine()); // ¹è¿­ÀÇ Å©±â
-		int N = Integer.parseInt(br.readLine()); // A ¹è¿­ÀÇ Å©±â
+		int T = Integer.parseInt(br.readLine()); // ë°°ì—´ì˜ í¬ê¸°
+		int N = Integer.parseInt(br.readLine()); // A ë°°ì—´ì˜ í¬ê¸°
 		int a[] = new int[N];
-		// ÀÔ·Â°ª ÀúÀå
+		// ì…ë ¥ê°’ ì €ì¥
 		st = new StringTokenizer(br.readLine(), " ");
 		for(int i = 0; i < N; i++)
 		{
 			a[i] = Integer.parseInt(st.nextToken());
 		}
-		int M = Integer.parseInt(br.readLine()); // B ¹è¿­ÀÇ Å©±â
+		int M = Integer.parseInt(br.readLine()); // B ë°°ì—´ì˜ í¬ê¸°
 		int b[] = new int[M];
 		st = new StringTokenizer(br.readLine(), " ");
 		for(int i = 0; i < M; i++)
 		{
 			b[i] = Integer.parseInt(st.nextToken());
 		}
-		// ºÎºĞÇÕ ÀúÀå
+		// ë¶€ë¶„í•© ì €ì¥
 		ArrayList<Integer> aa = new ArrayList<Integer>();
 		for(int i = 0; i < N; i++)
 		{
