@@ -9,7 +9,7 @@ import java.io.OutputStreamWriter;
 public class Main {
 	static long solve(int n) 
 	{
-		// dp ÀÌ¿ëÇÑ ¹æ¹ı
+		// dp ì´ìš©í•œ ë°©ë²•
 		if(n == 0)
 		{
 			return 0;
