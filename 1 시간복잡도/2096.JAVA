@@ -16,7 +16,7 @@ public class Main {
 		int min[][] = new int[2][4];
 		int max[][] = new int[2][4];
 		st = new StringTokenizer(br.readLine(), " ");
-		// ½ÃÀÛÁÙ ÀúÀå dp ÀÌ¿ë
+		// ì‹œì‘ì¤„ ì €ì¥ dp ì´ìš©
 		for(int i = 1; i <= 3; i++)
 		{
 			min[0][i] = Integer.parseInt(st.nextToken());
@@ -25,17 +25,17 @@ public class Main {
 		for(int i = 2; i <= N; i++)
 		{
 			st = new StringTokenizer(br.readLine(), " ");
-			int a = Integer.parseInt(st.nextToken()); // 1¿­
-			int b = Integer.parseInt(st.nextToken()); // 2¿­
-			int c = Integer.parseInt(st.nextToken()); // 3¿­
-			// ÃÖ¼Ò
+			int a = Integer.parseInt(st.nextToken()); // 1ì—´
+			int b = Integer.parseInt(st.nextToken()); // 2ì—´
+			int c = Integer.parseInt(st.nextToken()); // 3ì—´
+			// ìµœì†Œ
 			min[1][1] =  a + Math.min(min[0][1], min[0][2]);
 			min[1][2] =  b + Math.min(min[0][1], Math.min(min[0][2], min[0][3]));
 			min[1][3] =  c + Math.min(min[0][2], min[0][3]);
 			min[0][1] = min[1][1];
 			min[0][2] = min[1][2];
 			min[0][3] = min[1][3];
-			// ÃÖ´ë
+			// ìµœëŒ€
 			max[1][1] = a + Math.max(max[0][1], max[0][2]);
 			max[1][2] = b + Math.max(max[0][1], Math.max(max[0][2], max[0][3]));
 			max[1][3] = c + Math.max(max[0][2], max[0][3]);
