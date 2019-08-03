@@ -13,8 +13,8 @@ public class Main {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		StringTokenizer st = null;
 		st = new StringTokenizer(br.readLine(), " ");
-		int N = Integer.parseInt(st.nextToken()); // ¼ö¿­ Å©±â
-		int M = Integer.parseInt(st.nextToken()); // ÇÕÀÌ °°¾Æ¾ß ÇÏ´Â ¼ö
+		int N = Integer.parseInt(st.nextToken()); // ìˆ˜ì—´ í¬ê¸°
+		int M = Integer.parseInt(st.nextToken()); // í•©ì´ ê°™ì•„ì•¼ í•˜ëŠ” ìˆ˜
 		st = new StringTokenizer(br.readLine(), " ");
 		int matrix[] = new int[N+1];
 		for(int i = 1; i <= N; i++)
