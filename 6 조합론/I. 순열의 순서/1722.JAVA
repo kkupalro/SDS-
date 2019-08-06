@@ -3,10 +3,10 @@ import java.util.*;
 
 public class Main {
 
-    static int N; // 1 ¡Â N ¡Â 20
+    static int N; // 1 â‰¤ N â‰¤ 20
     static int OP; // 1 or 2
-    static int[] A; // OP 2ÀÏ °æ¿ì ¸î¹øÂ° ¼ö¿­
-    static int[] ans; // OP 1ÀÏ °æ¿ì K¹øÂ° ¼ö¿­À» ³ªÅ¸³»´Â N°³ÀÇ ¼ö
+    static int[] A; // OP 2ì¼ ê²½ìš° ëª‡ë²ˆì§¸ ìˆ˜ì—´
+    static int[] ans; // OP 1ì¼ ê²½ìš° Kë²ˆì§¸ ìˆ˜ì—´ì„ ë‚˜íƒ€ë‚´ëŠ” Nê°œì˜ ìˆ˜
     static int[] visit;
     static long K;
     static long fac[]; // N!
@@ -23,7 +23,7 @@ public class Main {
         N = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine());
         OP = Integer.parseInt(st.nextToken());
-        // N! °è»ê
+        // N! ê³„ì‚°
         fac[0] = 1;
         for (int i = 1; i <= N; i++) {
             fac[i] = fac[i - 1] * i;
@@ -45,7 +45,7 @@ public class Main {
                     cnt++;
                 }
             }
-            // Ãâ·Â ºÎ¹®
+            // ì¶œë ¥ ë¶€ë¬¸
             for (int i = 1; i <= N; i++){
                 bw.write(ans[i] + " ");
             }
