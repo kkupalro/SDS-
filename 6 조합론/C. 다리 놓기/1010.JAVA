@@ -9,7 +9,7 @@ public class Main {
         
         while(T-- > 0)
         {
-        	// �Ľ�Į�� �ﰢ��
+        	// ÆÄ½ºÄ®ÀÇ »ï°¢Çü
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int N = Integer.parseInt(st.nextToken());
             int K = Integer.parseInt(st.nextToken());
