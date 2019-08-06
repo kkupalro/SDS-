@@ -4,7 +4,7 @@ import java.util.*;
 public class Main {
 	static int N; // ~100
 	static int M; // ~100
-	static int K; // ÃÖ´ë 10¾ï
+	static int K; // ÃƒÃ–Â´Ã« 10Â¾Ã¯
 	static StringBuilder result;
 	static int dp[][];
 	static final int DIV = 1000000000;
