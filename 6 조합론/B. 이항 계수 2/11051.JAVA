@@ -7,7 +7,7 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-        // �Ľ�Į�� �ﰢ��
+        // ÆÄ½ºÄ®ÀÇ »ï°¢Çü
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
         // N(C)K
