@@ -1,5 +1,3 @@
-package N4;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -8,72 +6,72 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Main {
-	static final int INF = Integer.MAX_VALUE;
-	static int matrix[][];
-	static int dist[];
-	static int M, N;
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    static final int INF = Integer.MAX_VALUE;
+    static int matrix[][];
+    static long dist[];
+    static int M, N;
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st;
         st = new StringTokenizer(br.readLine(), " ");
-        N = Integer.parseInt(st.nextToken()); // µµ½ÃÀÇ °¹¼ö
-        M = Integer.parseInt(st.nextToken()); // ¹ö½º ³ë¼±ÀÇ °³¼ö
+        N = Integer.parseInt(st.nextToken()); // ë„ì‹œì˜ ê°¯ìˆ˜
+        M = Integer.parseInt(st.nextToken()); // ë²„ìŠ¤ ë…¸ì„ ì˜ ê°œìˆ˜
         matrix = new int[M][3];
-        dist = new int[N+1];
+        dist = new long[N+1];
         for(int i = 1; i <= N; i++)
         {
-        	dist[i] = INF;
+            dist[i] = INF;
         }
         dist[1] = 0;
         for(int i = 0; i < M; i++)
         {
-        	st = new StringTokenizer(br.readLine(), " ");
-        	int a = Integer.parseInt(st.nextToken());
-        	int b = Integer.parseInt(st.nextToken());
-        	int c = Integer.parseInt(st.nextToken());
-        	matrix[i][0] = a;
-        	matrix[i][1] = b;
-        	matrix[i][2] = c;
+            st = new StringTokenizer(br.readLine(), " ");
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            int c = Integer.parseInt(st.nextToken());
+            matrix[i][0] = a;
+            matrix[i][1] = b;
+            matrix[i][2] = c;
         }
         for(int v = 0; v < N-1; v++)
         {
-        	for(int w = 0; w < M; w++)
-        	{
-        		if(dist[matrix[w][0]] == INF) continue;
-        		if(dist[matrix[w][1]] > matrix[w][2] + dist[matrix[w][0]]) {
-        			dist[matrix[w][1]] = matrix[w][2] + dist[matrix[w][0]];
-        		}
-        	}
+            for(int w = 0; w < M; w++)
+            {
+                if(dist[matrix[w][0]] == INF) continue;
+                if(dist[matrix[w][1]] > matrix[w][2] + dist[matrix[w][0]]) {
+                    dist[matrix[w][1]] = matrix[w][2] + dist[matrix[w][0]];
+                }
+            }
         }
         boolean update =false;
         for(int w = 0; w < M; w++)
         {
-        	if(dist[matrix[w][0]] == INF) continue;
-    		if(dist[matrix[w][1]] > matrix[w][2] + dist[matrix[w][0]]) {
-    			update = true;
-    		}
+            if(dist[matrix[w][0]] == INF) continue;
+            if(dist[matrix[w][1]] > matrix[w][2] + dist[matrix[w][0]]) {
+                update = true;
+            }
         }
         if(!update)
         {
-        	for(int i = 2; i <= N; i++)
+            for(int i = 2; i <= N; i++)
             {
-        		if(dist[i] == INF)
-        		{
-        			bw.write("-1\n");
-        		}
-        		else 
-        		{
-        			bw.write(Integer.toString(dist[i])+"\n");
-        		}
+                if(dist[i] == INF)
+                {
+                    bw.write("-1\n");
+                }
+                else 
+                {
+                    bw.write(Long.toString(dist[i])+"\n");
+                }
             }
         }
         else
         {
-        	bw.write("-1\n");
+            bw.write("-1\n");
         }
         bw.flush();
         br.close();
-	}
+    }
 }
 
