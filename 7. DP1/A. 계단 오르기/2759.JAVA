@@ -19,8 +19,12 @@ public class Main {
 		{
 			score[i] = Integer.parseInt(br.readLine());
 		}
+        
 		dp[1] = score[1];
-		dp[2] = Math.max(score[1] + score[2], score[2]);
+        if(N > 1){
+            dp[2] = Math.max(score[1] + score[2], score[2]);
+        }
+		
 		for(int i = 3; i <= N; i++)
 		{
 			dp[i] = Math.max(dp[i-2] + score[i], dp[i-3] + score[i-1] + score[i]); 
